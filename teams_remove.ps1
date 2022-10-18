@@ -18,7 +18,7 @@ ForEach($server in $Servers) {
 		if ($user -eq $logged_user){
 			# do nothing
 		}else{
-			Remove-Item "C:\Users\$user\AppData\Local\Microsoft\Teams\current -Recurse -Force"
+			Remove-Item "C:\Users\$user\AppData\Local\Microsoft\Teams\current" -Recurse -Force
 		}
 	}
 }
@@ -35,7 +35,7 @@ ForEach($server in $Servers) {
 	Foreach ($user in $profiles) { 
 		#delete 'current' folder in path
 		
-		Remove-Item "C:\Users\$user\AppData\Local\Microsoft\Teams\current -Recurse -Force"
+		Remove-Item "C:\Users\$user\AppData\Local\Microsoft\Teams\current" -Recurse -Force
 
 	}
 }
